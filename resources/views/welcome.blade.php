@@ -35,7 +35,7 @@
             <div class="row justify-content-center">
                 @foreach($mereks as $merek)
                 <div class="card-deck"  >
-                    <div class="card " style="width: 10rem;">
+                    <div class="card " style="width: 15rem;">
                         <img src="{{ asset("storage/$merek->gambar") }}" class="card-img-top"
                              style="height: 200px; width: auto" alt="...">
                         <div class="card-footer">

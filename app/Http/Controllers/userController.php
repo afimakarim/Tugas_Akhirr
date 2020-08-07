@@ -40,6 +40,12 @@ class userController extends Controller
         $promos = Promo::where('motor_id', $motor->id)->get();
         return view('User.detailMotor', compact('motor','promos'));
     }
+    public function detailMotor2(Motor $motor)
+    {
+//        $motor = Motor::where('id', $request->motor)->first();
+        $promos = Promo::where('motor_id', $motor->id)->get();
+        return view('User.detailMotor2', compact('motor','promos'));
+    }
 
     public function anggaranMotor(Request $request)
     {
@@ -67,7 +73,7 @@ class userController extends Controller
 //        $dealers = Dealer::with(['user' => function($query) {
 //            $query->groupBy('id');
 //        }])->get();
-
+        $mereks = Merek::all();
         $dealers = Dealer::all()->groupBy('user.merek.id');
 
         $data = (array)[];
@@ -78,7 +84,7 @@ class userController extends Controller
         }
 //
 //        return response()->json($data);
-        return view('User.dealerMotor', compact(['data']));
+        return view('User.dealerMotor', compact(['data','mereks']));
     }
     public function detailDealer(Dealer $dealer)
     {
@@ -86,9 +92,10 @@ class userController extends Controller
         return view('User.detailDealer', compact(['dealer', 'promos']));
     }
 
-    public function detailPromo()
+    public function detailPromo(Promo $promo)
     {
-        return view('User.detailPromo');
+//        $promos = Promo::where('motor_id', $motor->id)->get();
+        return view('User.detailPromo', compact(['promo']));
     }
 
 

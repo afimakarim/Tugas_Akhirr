@@ -25,6 +25,9 @@ class ProfileController extends Controller
     }
     public function updateProfileDealer(Request $request)
     {
+        if(strlen($request->telephone)>13){
+            return redirect()->route('dealer.profile')->withDanger('Nomor Telephone Tidak Lebih Lebih dari 13 !');
+        }
         if(strlen($request->name)<=3){
             return redirect()->route('dealer.profile')->withDanger('Username Harus Lebih dari 3 !');
         }

@@ -25,16 +25,17 @@
                     <div class="search_form">
                         <form action="{{ route('user.detailMotor') }}" method="post">
                             {{ csrf_field() }}
+
                             <div class="form-row">
                                 <div class="col-lg-9">
                                     <div class="search_form_iner">
-                                        <select class="custom_select" name="merek" id="merek">
+                                        <select class="custom_select" name="merek" id="merek" required>
                                             <option value=""  disabled selected>-- Merek Motor--</option>
                                             @foreach($mereks as $merek)
                                                 <option value="{{$merek->id}}">{{$merek->name}}</option>
                                             @endforeach
                                         </select>
-                                        <select class="custom_select" id="motor" name="motor">
+                                        <select class="custom_select" id="motor" name="motor" required>
                                             <option  value=""  disabled selected>-- Tipe Motor--</option>
                                         </select>
                                     </div>
@@ -50,7 +51,8 @@
                             <div class="form-row">
                                 <div class="col-lg-9">
                                     <div class="search_form_iner">
-                                        <select class="custom_select" name="anggaran" id="inlineFormCustomSelect">
+
+                                        <select class="custom_select" name="anggaran" id="inlineFormCustomSelect" required>
                                             <option value=""  disabled selected > -- Pilih Anggaran -- </option>
                                             <option value="1">< Kurang Dari 20 Juta</option>
                                             <option value="2">< Kurang Dari 25 Juta</option>
@@ -90,16 +92,12 @@
                                 <img src="{{ asset("storage/$dealer->gambar") }}" style="height: 200px; height: 200px" alt="">
                                 <div class="blog_text">
                                     <h2>{{ $dealer-> name }}</h2>
-                                    <p>Jalan AR.Hakim No.18 Kel Randugunting
-                                        Kecamatan Tegal Selatan...<a href="" style="color: #0b97c4">Detail</a></p>
+                                    <p>{{ str_limit($dealer->alamat, 25, '...')  }}<a href="{{ route('user.detailDealer', $dealer) }}" style="color: #0b97c4">Detail</a></p>
                                 </div>
                             </div>
                         </div>
                             @endforeach
                     </div>
-                </div>
-                <div class="text-center">
-                    <a href="#" class="genric-btn success large">Lihat Selengkapnya</a>
                 </div>
             </section>
         <br>

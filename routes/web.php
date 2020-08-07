@@ -41,12 +41,13 @@ Route::get('/cariMotor','UserController@cariMotor')->name('user.cariMotor');
 Route::get('/merek/motor/{id}','UserController@merekMotor');
 
 Route::post('/detailMotor','UserController@detailMotor')->name('user.detailMotor');
+Route::post('/detailMotorAnggaran/{motor}','UserController@detailMotor2')->name('user.detailMotor2');
 Route::post('/anggaranMotor','UserController@anggaranMotor')->name('user.anggaranMotor');
 
 Route::get('/dealerMotor','UserController@dealerMotor')->name('user.dealerMotor');
 Route::get('/detailDealer/{dealer}','UserController@detailDealer')->name('user.detailDealer');
 
-Route::get('/detailPromo','UserController@detailPromo')->name('user.detailPromo');
+Route::get('/detailPromo/{promo}','UserController@detailPromo')->name('user.detailPromo');
 
 Route::get('/infoSPK','UserController@infoSPK')->name('user.infoSPK');
 Route::get('/SPK-Nama','UserController@spk')->name('user.spk');

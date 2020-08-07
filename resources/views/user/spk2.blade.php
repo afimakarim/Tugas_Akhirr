@@ -29,7 +29,7 @@
                                 </select>
                             </div><br>
                             <div class="input-group">
-                                <select name="harga"  class="form-control custom_select3">
+                                <select name="harga"  class="form-control custom_select3" required>
                                     <option value=""  disabled selected > -- Harga Motor -- </option>
                                     <option value="5">(5) Sangat Penting</option>
                                     <option value="4">(4) Penting</option>
@@ -39,7 +39,7 @@
                                 </select>
                             </div><br>
                             <div class="input-group">
-                                <select name="mesin" class="form-control custom_select3">
+                                <select name="mesin" class="form-control custom_select3" required>
                                     <option value=""  disabled selected > -- Kapasitas Mesin -- </option>
                                     <option value="5">(5) Sangat Penting</option>
                                     <option value="4">(4) Penting</option>
@@ -49,7 +49,7 @@
                                 </select>
                             </div><br>
                             <div class="input-group">
-                                <select name="tengki" class="form-control custom_select3">
+                                <select name="tengki" class="form-control custom_select3" required>
                                     <option value=""  disabled selected > -- Kapasitas Tengki -- </option>
                                     <option value="5">(5) Sangat Penting</option>
                                     <option value="4">(4) Penting</option>
@@ -59,7 +59,7 @@
                                 </select>
                             </div><br>
                             <div class="input-group">
-                                <select name="bagasi" class="form-control custom_select3">
+                                <select name="bagasi" class="form-control custom_select3" required>
                                     <option value=""  disabled selected > -- Kapasitas Bagasi -- </option>
                                     <option value="5">(5) Sangat Penting</option>
                                     <option value="4">(4) Penting</option>
@@ -69,7 +69,7 @@
                                 </select>
                             </div><br>
                             <div class="input-group">
-                                <select name="berat" class="form-control custom_select3">
+                                <select name="berat" class="form-control custom_select3" required>
                                     <option value=""  disabled selected > -- Berat Isi-- </option>
                                     <option value="5">(5) Sangat Penting</option>
                                     <option value="4">(4) Penting</option>

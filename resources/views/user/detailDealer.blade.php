@@ -12,8 +12,7 @@
                 <div class="col-lg-5">
                     <div class="feature_part_text">
                         <img src="{{ ('img/company.png')}}" style="height: 50px;width: auto;" alt="#">
-                        <h2>{{ $dealer->name }}</h2
-                        >
+                        <h2>{{ $dealer->name }}</h2>
                         <span>Honda Naga Mas Motor adalah salah satu dealer Honda populer di Tegal.
                             Dealer ini terletak di Jl. A. Yani No. 19, Tegal dan Anda bisa mengunjunginya untuk test drive,
                             mendapatkan penawaran terbaik, membeli motor Honda.</span>
@@ -62,7 +61,7 @@
                         <img src="{{ asset('storage/' . $promo->gambar) }}" style="height: 200px; height: 200px" alt="">
                         <div class="blog_text ">
                             <h2>{{ $promo->judul }}</h2>
-                            <a href="{{ route('user.detailPromo') }}" class="genric-btn success-border circle">Lihat Detail</a>
+                            <a href="{{ route('user.detailPromo', $promo) }}" class="genric-btn success-border circle">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
