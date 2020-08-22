@@ -10,7 +10,7 @@ use App\dealer;
 use App\Merek;
 use App\Motor;
 
-class userController extends Controller
+class UserController extends Controller
 {
     public function index()
     {
@@ -92,10 +92,10 @@ class userController extends Controller
         return view('User.detailDealer', compact(['dealer', 'promos']));
     }
 
-    public function detailPromo(Promo $promo)
+    public function detailPromo(Promo $promo, Dealer $dealer)
     {
-//        $promos = Promo::where('motor_id', $motor->id)->get();
-        return view('User.detailPromo', compact(['promo']));
+        $promos = Promo::where('dealer_id', $dealer->id)->get();
+        return view('User.detailPromo', compact(['promo', 'promos']));
     }
 
 

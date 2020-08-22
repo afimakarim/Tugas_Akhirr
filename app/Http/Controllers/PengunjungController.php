@@ -7,7 +7,7 @@ use Session;
 use App\Motor;
 use Illuminate\Http\Request;
 
-class pengunjungController extends Controller
+class PengunjungController extends Controller
 {
     /**
      * Display a listing of the resource.

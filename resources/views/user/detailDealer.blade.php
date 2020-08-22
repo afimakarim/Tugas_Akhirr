@@ -13,16 +13,14 @@
                     <div class="feature_part_text">
                         <img src="{{ ('img/company.png')}}" style="height: 50px;width: auto;" alt="#">
                         <h2>{{ $dealer->name }}</h2>
-                        <span>Honda Naga Mas Motor adalah salah satu dealer Honda populer di Tegal.
-                            Dealer ini terletak di Jl. A. Yani No. 19, Tegal dan Anda bisa mengunjunginya untuk test drive,
-                            mendapatkan penawaran terbaik, membeli motor Honda.</span>
-                        <span>Jam Buka : 07:00 - 16:00 WIB</span><br>
+                        <span>{{ $dealer->ket_dealer }}</span>
+                        <span>{{ $dealer->jam_buka }}</span><br>
                         <div class="row">
                             <div class="col-sm-6 col-md-4">
                                 <div class="feature_part_text_iner">
                                     <h4>Telephone</h4>
                                     <p>
-                                        +62283350038
+                                        {{$dealer->telephone}}
                                     </p>
                                 </div>
                             </div>
@@ -30,8 +28,7 @@
                                 <div class="feature_part_text_iner">
                                     <h4>Lokasi</h4>
                                     <p>
-                                        Jalan AR.Hakim No.18 Kel Randugunting
-                                        Kecamatan Tegal Selatan
+                                        {{$dealer->alamat}}
                                     </p>
                                 </div>
                             </div>
@@ -66,46 +63,7 @@
                     </div>
                 </div>
                 @endforeach
-{{--                <div class="col-lg-4 col-sm-6 text-center">--}}
-{{--                    <div class="single_blog_part">--}}
-{{--                        <img src="img/promo.jpg" style="height: 200px; height: 200px" alt="">--}}
-{{--                        <div class="blog_text ">--}}
-{{--                            <h2>Hujan Promo Awal Tahun 2020 Naga Mas Tegal</h2>--}}
-{{--                            <a href="#" class="genric-btn success-border circle">Lihat Detail</a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-lg-4 col-sm-6 text-center">--}}
-{{--                    <div class="single_blog_part">--}}
-{{--                        <img src="img/promo.jpg" style="height: 200px; height: 200px" alt="">--}}
-{{--                        <div class="blog_text ">--}}
-{{--                            <h2>Hujan Promo Awal Tahun 2020 Naga Mas Tegal</h2>--}}
-{{--                            <a href="#" class="genric-btn success-border circle">Lihat Detail</a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-lg-4 col-sm-6 text-center">--}}
-{{--                    <div class="single_blog_part">--}}
-{{--                        <img src="img/promo.jpg" style="height: 200px; height: 200px" alt="">--}}
-{{--                        <div class="blog_text ">--}}
-{{--                            <h2>Hujan Promo Awal Tahun 2020 Naga Mas Tegal</h2>--}}
-{{--                            <a href="#" class="genric-btn success-border circle">Lihat Detail</a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-lg-4 col-sm-6 text-center">--}}
-{{--                    <div class="single_blog_part">--}}
-{{--                        <img src="img/promo.jpg" style="height: 200px; height: 200px" alt="">--}}
-{{--                        <div class="blog_text ">--}}
-{{--                            <h2>Hujan Promo Awal Tahun 2020 Naga Mas Tegal</h2>--}}
-{{--                            <a href="#" class="genric-btn success-border circle">Lihat Detail</a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
             </div>
-        </div>
-        <div class="text-center">
-            <a href="#" class="genric-btn success radius">Lihat Selengkapnya</a>
         </div>
     </section>
 
