@@ -6,7 +6,7 @@ use App\Promo;
 use App\User;
 use Illuminate\Http\Request;
 use Session;
-use App\dealer;
+use App\Dealer;
 use App\Merek;
 use App\Motor;
 
