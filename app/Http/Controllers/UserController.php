@@ -21,7 +21,7 @@ class UserController extends Controller
     {
         $dealers = Dealer::all();
         $mereks = Merek::orderBy('name', 'ASC')->get();
-        return view('User.cariMotor', compact('mereks', 'dealers'));
+        return view('user.cariMotor', compact('mereks', 'dealers'));
     }
 
     public function merekMotor($id){
@@ -38,13 +38,13 @@ class UserController extends Controller
     {
         $motor = Motor::where('id', $request->motor)->first();
         $promos = Promo::where('motor_id', $motor->id)->get();
-        return view('User.detailMotor', compact('motor','promos'));
+        return view('user.detailMotor', compact('motor','promos'));
     }
     public function detailMotor2(Motor $motor)
     {
 //        $motor = Motor::where('id', $request->motor)->first();
         $promos = Promo::where('motor_id', $motor->id)->get();
-        return view('User.detailMotor2', compact('motor','promos'));
+        return view('user.detailMotor2', compact('motor','promos'));
     }
 
     public function anggaranMotor(Request $request)
@@ -60,7 +60,7 @@ class UserController extends Controller
             $motors = Motor::where('harga_motor', '>', 30000000)->get();
         }
 //        dd($motors);
-        return view('User.anggaranMotor', compact('motors', 'harga'));
+        return view('user.anggaranMotor', compact('motors', 'harga'));
     }
 
 
@@ -84,7 +84,7 @@ class UserController extends Controller
         }
 //
 //        return response()->json($data);
-        return view('User.dealerMotor', compact(['data','mereks']));
+        return view('user.dealerMotor', compact(['data','mereks']));
     }
     public function detailDealer(Dealer $dealer)
     {
@@ -95,7 +95,7 @@ class UserController extends Controller
     public function detailPromo(Promo $promo, Dealer $dealer)
     {
         $promos = Promo::where('dealer_id', $dealer->id)->get();
-        return view('User.detailPromo', compact(['promo', 'promos']));
+        return view('user.detailPromo', compact(['promo', 'promos']));
     }
 
 
@@ -103,19 +103,19 @@ class UserController extends Controller
 
     public function infoSPK()
     {
-        return view('User.infoSPK');
+        return view('user.infoSPK');
     }
     public function spk()
     {
-        return view('User.spk');
+        return view('user.spk');
     }
     public function spk2()
     {
-        return view('User.spk2');
+        return view('user.spk2');
     }
 
     public function hasilSPK()
     {
-        return view('User.hasilSPK');
+        return view('user.hasilSPK');
     }
 }
