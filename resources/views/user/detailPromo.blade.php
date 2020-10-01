@@ -40,30 +40,66 @@
         </div>
     </section><br><br>
 
-    <section class="blog_part ">
+    <section class="card-body">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
-                    <div class="section_tittle">
-                        <h2>Promo dan Event</h2>
-                        <br>
-                        <br>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                @foreach($promos as $promo)
-                    <div class="col-lg-4 col-sm-6 text-center">
-                        <div class="single_blog_part">
-                            <img src="{{ asset('storage/' . $promo->gambar) }}" style="height: 200px; height: 200px" alt="">
-                            <div class="blog_text ">
-                                <h2>{{ $promo->judul }}</h2>
-                                <a href="{{ route('user.detailPromo', $promo) }}" class="genric-btn success-border circle">Lihat Detail</a>
+                <div class="comment-form">
+                    <h4>Komentar</h4>
+                    <form class="form-contact comment_form" method="post" action="{{ route('user.komentar', $promo) }}"
+                          id="commentForm">
+                        {{ csrf_field() }}
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                  <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9"
+                                            placeholder="Masukan Komentar"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input class="form-control" name="name" id="name" type="text"
+                                           placeholder="Masukan Nama">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input class="form-control" name="email" id="email" type="email"
+                                           placeholder="Masukan Email">
+                                </div>
                             </div>
                         </div>
+                        <div class="form-group mt-3">
+                            <button type="submit" class="button button-contactForm btn_1">
+                                Kirim Komentar <i class="flaticon-right-arrow"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="comments-area">
+                        <h4>{{ $komentars->count() }} Comments</h4>
+                        @foreach($komentars as $komentar)
+                            <div class="comment-list">
+                                <div class="single-comment justify-content-between d-flex">
+                                    <div class="user justify-content-between d-flex">
+                                        <div class="desc">
+                                            <p class="comment">
+                                                {{ $komentar->komentar }}
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <h5>
+{{--                                                        <a><font color="#1e90ff">{{ $komentar->nama }}</font> </a>--}}
+                                                        <a>{{ $komentar->nama }} </a>
+                                                    </h5>
+                                                    <p class="date">{{ $komentar->created_at->diffForHumans() }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
-                @endforeach
+                </div>
             </div>
         </div>
 

@@ -28,6 +28,7 @@
 {{--                <li><a href="{{ route('dealer.dashboard') }}"><i class="fa fa-home"></i> Home </a></li>--}}
                 <li><a href="{{ route('dealer.profile') }}"><i class="fa fa-user"></i> Profile Dealer </a></li>
                 <li><a href="{{ route('dealer.promo') }}"><i class="fa fa-shopping-bag"></i> Promo Dealer </a></li>
+                <li><a href="{{ route('dealer.komentar') }}"><i class="fa fa-comment"></i> Kelola Komentar </a></li>
 {{--                <li><a href="{{ route('dealer.rangking') }}"><i class="fa fa-list-alt"></i> Rangking Alternatif </a></li>--}}
 
                 <!-- <li><a><i class="fa fa-calculator"></i> SPK Weighted Product<span class="fa fa-chevron-down"></span></a>

@@ -21,7 +21,7 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
-                        <div   profile_left">
+                        <div>
                             <div class="profile_img">
                                 <div id="crop-avatar">
                                     <!-- Current avatar -->

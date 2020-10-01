@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Komentar;
 use App\Promo;
 use App\User;
 use Illuminate\Http\Request;
@@ -95,10 +96,9 @@ class UserController extends Controller
     public function detailPromo(Promo $promo, Dealer $dealer)
     {
         $promos = Promo::where('dealer_id', $dealer->id)->get();
-        return view('user.detailPromo', compact(['promo', 'promos']));
+        $komentars = Komentar::where('id_promo', $promo->id)->orderBy('created_at', 'DESC')->get();
+        return view('user.detailPromo', compact(['promo', 'promos', 'komentars']));
     }
-
-
 
 
     public function infoSPK()
@@ -117,5 +117,18 @@ class UserController extends Controller
     public function hasilSPK()
     {
         return view('user.hasilSPK');
+    }
+
+    public function komentar(Request $request, Promo $promo)
+    {
+//        dd($request->all(), $promo);
+        $komentar = new Komentar();
+        $komentar->id_promo = $promo->id;
+        $komentar->email = $request->email;
+        $komentar->nama = $request->name;
+        $komentar->komentar = $request->comment;
+//        dd($komentar);
+        $komentar->save();
+        return redirect()->back();
     }
 }

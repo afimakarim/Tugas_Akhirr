@@ -23,4 +23,9 @@ class Promo extends Model
     {
         return $this->belongsTo(Motor::class);
     }
+
+    public function komentar()
+    {
+        return $this->hasMany(Komentar::class, 'id_promo', 'id');
+    }
 }
