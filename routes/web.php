@@ -65,6 +65,8 @@ Route::prefix('superAdmin')->group(function () {
 
     Route::get('/', 'Super_Admin\HomeController@index')->name('admin.dashboard');
 
+    Route::get('chart', 'Super_Admin\HomeController@chart');
+
     Route::get('/userAdminPusat', 'Super_Admin\PusatController@userAdminPusat')->name('admin.pusat');
     Route::post('/userAdminPusat', 'Super_Admin\PusatController@store')->name('admin.pusat.store');
     Route::get('/{user}/editUserAdminPusat', 'Super_Admin\PusatController@editUserAdminPusat')->name('admin.pusat.edit');

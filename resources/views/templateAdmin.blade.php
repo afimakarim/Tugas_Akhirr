@@ -59,7 +59,7 @@
             <!-- <script src="https://code.jquery.com/jquery-3.1.0.js"></script> -->
 
 
-            <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.js"></script> 
+            <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.js"></script>
 
 
             

@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="col-lg-12">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href=""> <img src="img/tr.png" style="width: 100px; height: auto" alt="logo"> </a>
+                    <a class="navbar-brand" href=""> <img src="{{ asset('img/tr.png') }}" style="width: 100px; height: auto" alt="logo"> </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +42,6 @@
 
 
                         </ul>
-                        <a class="" href="#"></a>
                         <div class="nav-item dropdown fa-pull-right">
                             <a class="btn_1 d-none d-lg-block" href="" id="navbarDropdown"
                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

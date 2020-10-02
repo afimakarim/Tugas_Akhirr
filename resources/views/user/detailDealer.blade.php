@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="feature_part_text">
-                        <img src="{{ ('img/company.png')}}" style="height: 50px;width: auto;" alt="#">
+                        <img src="{{ asset('img/company.png')}}" style="height: 50px;width: auto;" alt="#">
                         <h2>{{ $dealer->name }}</h2>
                         <span>{{ $dealer->ket_dealer }}</span>
                         <span>{{ $dealer->jam_buka }}</span><br>
@@ -44,9 +44,9 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="section_tittle">
+                        <br>
+                        <br>
                         <h2>Promo dan Event</h2>
-                        <br>
-                        <br>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                 @foreach($promos as $promo)
                 <div class="col-lg-4 col-sm-6 text-center">
                     <div class="single_blog_part">
-                        <img src="{{ asset('storage/' . $promo->gambar) }}" style="height: 200px; height: 200px" alt="">
+                        <a href="{{ route('user.detailPromo', $promo) }}"><img src="{{ asset('storage/' . $promo->gambar) }}" style="height: 200px; height: 200px" alt=""></a>
                         <div class="blog_text ">
                             <h2>{{ $promo->judul }}</h2>
                             <a href="{{ route('user.detailPromo', $promo) }}" class="genric-btn success-border circle">Lihat Detail</a>

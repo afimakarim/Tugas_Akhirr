@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="feature_part_text">
-                        <img src="img/promotion.png" style="height: 50px;width: auto;" alt="#">
+                        <img src="{{asset('img/promotion.png')}}" style="height: 50px;width: auto;" alt="#">
                         <h2>{{ $promo->judul }}</h2>
                         <span>
                             {{$promo->ket_promo}}
@@ -87,10 +87,13 @@
                                             <div class="d-flex justify-content-between">
                                                 <div class="d-flex align-items-center">
                                                     <h5>
-{{--                                                        <a><font color="#1e90ff">{{ $komentar->nama }}</font> </a>--}}
-                                                        <a>{{ $komentar->nama }} </a>
+                                                        @if($komentar->is_admin)
+                                                            <a><font color="#1e90ff">{{ $komentar->nama }}</font> </a>
+                                                        @else
+                                                            <a>{{ $komentar->nama }} </a>
+                                                        @endif
                                                     </h5>
-                                                    <p class="date">{{ $komentar->created_at->diffForHumans() }}</p>
+                                                    <p class="date">{{ \Carbon\Carbon::parse($komentar->created_at)->format('d, F Y H:i') }}</p>
                                                 </div>
                                             </div>
                                         </div>

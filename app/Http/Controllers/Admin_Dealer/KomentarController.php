@@ -49,6 +49,7 @@ class KomentarController extends Controller
         $komentar->email = auth()->user()->email;
         $komentar->nama = auth()->user()->name;
         $komentar->komentar = $request->message;
+        $komentar->is_admin = true;
         $komentar->save();
 
         return redirect()->back();

@@ -48,6 +48,7 @@
             @yield('footer')
         </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
     <!-- <script src="https://code.jquery.com/jquery-3.1.0.js"></script> -->
@@ -107,8 +108,7 @@
         $("#password").password('toggle');
 
     </script>
-
-
+    @yield('additional_script')
 
 </body>
 </html>

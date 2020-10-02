@@ -31,7 +31,7 @@
                 @foreach($dealers as $dealer)
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_blog_part">
-                        <img src="{{ asset("storage/".$dealer->gambar) }}" style="height: 200px; height: 200px" alt="">
+                        <a href="{{ route('user.detailDealer', $dealer) }}"> <img src="{{ asset("storage/".$dealer->gambar) }}" style="height: 200px; height: 200px" alt=""></a>
                         <div class="blog_text">
                             <h2>{{ $dealer->name }}</h2>
                             <p>{{ str_limit($dealer->alamat, 25, '...')  }} <a href="{{ route('user.detailDealer', $dealer) }}" style="color: #0b97c4">Detail</a></p>
