@@ -25,7 +25,7 @@
 
             const data = await getData();
 
-            console.log(data);
+            console.log(JSON.stringify(data));
 
             var options = {
                 series: data,
