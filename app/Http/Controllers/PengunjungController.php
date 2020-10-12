@@ -160,7 +160,7 @@ class PengunjungController extends Controller
      */
     public function show(Request $request, $id)
     {
-        $data = pengunjung::where("kunjungan_id",$id)->orderBy('vektor_v','desc')->get();
+        $data = pengunjung::where("kunjungan_id",$id)->orderBy('vektor_v','desc')->take(5)->get();
         return view('user.hasilSPK',compact("data"));
     }
 

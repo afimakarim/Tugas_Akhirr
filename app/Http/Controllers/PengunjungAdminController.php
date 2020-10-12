@@ -51,7 +51,7 @@ class PengunjungAdminController extends Controller
      */
     public function show($id)
     {
-        $data = pengunjung::where("kunjungan_id",$id)->orderBy('vektor_v','desc')->get();
+        $data = pengunjung::where("kunjungan_id",$id)->orderBy('vektor_v','desc')->take(5)->get();
         return view('superAdmin/pengunjungDetail',compact("data"));
     }
 

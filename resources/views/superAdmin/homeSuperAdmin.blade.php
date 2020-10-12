@@ -1,19 +1,49 @@
 @extends('templateSuperAdmin')
 @section('main')
-<div class="right_col" role="main">
 
+    <div class="right_col" role="main">
+        <!-- top tiles -->
+        <div class="row" style="display: inline-block;" >
+            <div class="tile_count">
+                <div class="col-md-2 col-sm-4  tile_stats_count">
+                    <span class="count_top"><i class="fa fa-user"></i> Total Pengunjung</span>
+                    <div class="count green">2500</div>
+                </div>
+                <div class="col-md-2 col-sm-4  tile_stats_count">
+                    <span class="count_top"><i class="fa fa-user"></i> Total Dealer</span>
+                    <div class="count">123.50</div>
+                </div>
+                <div class="col-md-2 col-sm-4  tile_stats_count">
+                    <span class="count_top"><i class="fa fa-motorcycle"></i> Motor Matic</span>
+                    <div class="count">2,500</div>
+                </div>
+                <div class="col-md-2 col-sm-4  tile_stats_count">
+                    <span class="count_top"><i class="fa fa-motorcycle"></i> Motor Bebek</span>
+                    <div class="count">2,500</div>
+                </div>
+                <div class="col-md-2 col-sm-4  tile_stats_count">
+                    <span class="count_top"><i class="fa fa-motorcycle"></i> Motor Sport</span>
+                    <div class="count">2,500</div>
+                </div>
 
-    <div class="col-12">
-        <div class="total-revenue4" id="chart" style="height: 350px;"></div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="total-revenue4" id="chart" style="height: 350px;"></div>
+        </div>
+
     </div>
 
-</div>
 @stop
 
 
 
 @section('footer')
 @stop
+
+
+
 
 @section('additional_script')
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
@@ -25,7 +55,7 @@
 
             const data = await getData();
 
-            console.log(JSON.stringify(data));
+            //console.log(JSON.stringify(data));
 
             var options = {
                 series: data,
