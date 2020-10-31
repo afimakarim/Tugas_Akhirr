@@ -55,8 +55,9 @@ class KomentarController extends Controller
         return redirect()->back();
     }
 
-    public function destroy()
+    public function destroy(Komentar $komentar)
     {
-
+        $komentar->delete();
+        return redirect()->back()->withDanger('Komentar berhasil dihapus');
     }
 }

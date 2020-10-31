@@ -47,7 +47,7 @@ class PusatController extends Controller
 //            'password' => bcrypt($request->password),
 //            'merek_id' => $request['merek_id']
 //        ]);
-        return redirect()->route('admin.pusat')->withInfo('Merek Ditambahkan');
+        return redirect()->route('admin.pusat')->withInfo('Dealer Pusat Ditambahkan');
     }
 
     public function editUserAdminPusat(User $user)
@@ -61,10 +61,10 @@ class PusatController extends Controller
         if(strlen($request->name)<=3){
             return redirect()->route('admin.pusat')->withDanger('Username Harus Lebih dari 3 !');
         }
-        $check = User::where('email',$request->email)->count();
-        if($check >=1){
-            return redirect()->route('admin.pusat')->withDanger('Email Sudah Ada !');
-        }
+//        $check = User::where('email',$request->email)->count();
+//        if($check >=1){
+//            return redirect()->route('admin.pusat')->withDanger('Email Sudah Ada !');
+//        }
 
 
         if ($request['gambar']) {
@@ -85,13 +85,13 @@ class PusatController extends Controller
 //            'password' => bcrypt($request['password']),
 //            'merek_id' => $request['merek_id']
 //        ]);
-        return redirect()->route('admin.pusat')->withInfo('Merek berhasil dirubah');
+        return redirect()->route('admin.pusat')->withInfo('Dealer Pusat berhasil dirubah');
     }
 
     public function destroy(User $user)
     {
 //        $user = User::where('id', $id)->first();
         $user->delete();
-        return redirect()->route('admin.pusat')->withDanger('Merek berhasil dihapus');
+        return redirect()->route('admin.pusat')->withDanger('Dealer Pusat berhasil dihapus');
     }
 }

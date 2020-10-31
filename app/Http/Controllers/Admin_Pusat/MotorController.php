@@ -41,7 +41,7 @@ class MotorController extends Controller
         $motor->merek_id = auth()->user()->merek_id;
         $motor->save();
 
-        return redirect()->route('pusat.motor')->withInfo('Merek Ditambahkan');
+        return redirect()->route('pusat.motor')->withInfo('Motor Ditambahkan');
     }
 
     public function editDataMotor(Motor $motor)
@@ -70,11 +70,11 @@ class MotorController extends Controller
         $motor->jenis_transmisi = $request->jenis_transmisi;
         $motor->merek_id = auth()->user()->merek_id;
         $motor->update();
-        return redirect()->route('pusat.motor')->withInfo('Merek berhasil dirubah');
+        return redirect()->route('pusat.motor')->withInfo('Motor berhasil dirubah');
     }
     public function destroy(Motor $motor)
     {
         $motor->delete();
-        return redirect()->route('pusat.motor')->withDanger('Merek berhasil dihapus');
+        return redirect()->route('pusat.motor')->withDanger('Motor berhasil dihapus');
     }
 }

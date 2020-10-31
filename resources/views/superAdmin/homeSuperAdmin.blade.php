@@ -3,29 +3,28 @@
 
     <div class="right_col" role="main">
         <!-- top tiles -->
-        <div class="row" style="display: inline-block;" >
+        <div class="row"  >
             <div class="tile_count">
                 <div class="col-md-2 col-sm-4  tile_stats_count">
-                    <span class="count_top"><i class="fa fa-user"></i> Total Pengunjung</span>
-                    <div class="count green">2500</div>
-                </div>
-                <div class="col-md-2 col-sm-4  tile_stats_count">
                     <span class="count_top"><i class="fa fa-user"></i> Total Dealer</span>
-                    <div class="count">123.50</div>
+                    <div class="count">{{ $count_dealer }}</div>
                 </div>
                 <div class="col-md-2 col-sm-4  tile_stats_count">
                     <span class="count_top"><i class="fa fa-motorcycle"></i> Motor Matic</span>
-                    <div class="count">2,500</div>
+                    <div class="count">{{ $count_skuter }}</div>
                 </div>
                 <div class="col-md-2 col-sm-4  tile_stats_count">
                     <span class="count_top"><i class="fa fa-motorcycle"></i> Motor Bebek</span>
-                    <div class="count">2,500</div>
+                    <div class="count">{{ $count_bebek }}</div>
                 </div>
                 <div class="col-md-2 col-sm-4  tile_stats_count">
                     <span class="count_top"><i class="fa fa-motorcycle"></i> Motor Sport</span>
-                    <div class="count">2,500</div>
+                    <div class="count">{{ $count_sport }}</div>
                 </div>
-
+                <div class="col-md-6 col-sm-4  tile_stats_count">
+                    <span class="count"><i class="fa fa-user"></i> Total Pengunjung</span>
+                    <div class="count green">{{ $count_pengunjung }}</div>
+                </div>
             </div>
         </div>
 

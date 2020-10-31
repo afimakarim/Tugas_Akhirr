@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\Super_Admin;
 
+use App\Dealer;
 use App\Jenis;
+use App\Motor;
 use App\pengunjung;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use function foo\func;
 
 class HomeController extends Controller
 {
@@ -17,6 +20,29 @@ class HomeController extends Controller
 
     public function index()
     {
+        $dealer = Dealer::all();
+        $count_dealer = $dealer->count();
+
+        $skuter = Motor::whereHas('jenis', function ($query) {
+            $query->where('name', 'Skuter');
+        })->get();
+
+        $count_skuter = $skuter->count();
+
+        $bebek = Motor::whereHas('jenis', function ($query) {
+            $query->where('name', 'Bebek');
+        })->get();
+
+        $count_bebek = $bebek->count();
+
+        $sport = Motor::whereHas('jenis', function ($query) {
+            $query->where('name', 'Sport');
+        })->get();
+
+        $count_sport = $sport->count();
+
+        $count_pengunjung = pengunjung::groupBy('name')->get()->count();
+
 
         //     $pengunjung = pengunjung::orderBy('name', 'ASC')->get();
         //     $created_at = [];
@@ -27,7 +53,15 @@ class HomeController extends Controller
         //    }
         //    $oktober = count($bulan);
         //     return $oktober;
-        return view('superAdmin.homeSuperAdmin', compact('pengunjung'));
+        return view('superAdmin.homeSuperAdmin', compact(
+            [
+                'pengunjung',
+                'count_dealer',
+                'count_skuter',
+                'count_bebek',
+                'count_sport',
+                'count_pengunjung'
+            ]));
     }
 
     public function chart()
@@ -55,4 +89,6 @@ class HomeController extends Controller
         }
         return response()->json($results);
     }
+
+
 }

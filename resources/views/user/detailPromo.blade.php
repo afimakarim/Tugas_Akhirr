@@ -52,19 +52,19 @@
                             <div class="col-12">
                                 <div class="form-group">
                                   <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9"
-                                            placeholder="Masukan Komentar"></textarea>
+                                            placeholder="Masukan Komentar" required></textarea>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <input class="form-control" name="name" id="name" type="text"
-                                           placeholder="Masukan Nama">
+                                           placeholder="Masukan Nama" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <input class="form-control" name="email" id="email" type="email"
-                                           placeholder="Masukan Email">
+                                           placeholder="Masukan Email" required>
                                 </div>
                             </div>
                         </div>

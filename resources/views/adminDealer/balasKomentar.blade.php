@@ -49,7 +49,8 @@
                                                     <div class="block_content">
                                                         <div class="byline">
                                                             <span>{{ \Carbon\Carbon::parse($item->created_at)->format('H:i') }}</span>
-                                                            by <a>{{ $item->nama }}</a>
+                                                            by <a href="{{ route('dealer.komentar.delete', $item) }}"
+                                                                  onclick="return confirm('Yakin Anda ingin menghapus Data ini ?')">{{ $item->nama }} <i class='fa fa-trash' style='font-size:15px;color:red' title="Hapus"></i></a>
                                                         </div>
                                                         <p class="excerpt">{{ $item->komentar }}</p>
                                                     </div>

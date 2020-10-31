@@ -10,13 +10,13 @@
                 <div class="col-lg-8">
                     <div class="section_tittle">
                         @if($harga == 1)
-                            <h2>Daftar Sepeda Kurang Dari 20 Juta</h2>
+                            <h2>Daftar Harga Sepeda Motor Kurang Dari 20 Juta</h2>
                         @elseif($harga == 2)
-                            <h2>Daftar Sepeda Dari 20-25 Juta</h2>
+                            <h2>Daftar Harga Sepeda Motor Dari 20-25 Juta</h2>
                         @elseif($harga == 3)
-                            <h2>Daftar Sepeda Dari 25-30 Juta</h2>
+                            <h2>Daftar Harga Sepeda Motor Dari 25-30 Juta</h2>
                         @elseif($harga == 4)
-                            <h2>Daftar Sepeda Lebih Dri 30 Juta</h2>
+                            <h2>Daftar Harga Sepeda Motor Lebih Dari 30 Juta</h2>
                         @endif
 
                         <br>
